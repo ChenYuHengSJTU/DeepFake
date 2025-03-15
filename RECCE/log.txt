@@ -1,0 +1,8 @@
+['DeepFakeDetection', 'Deepfakes', 'Face2Face', 'FaceShifter', 'FaceSwap', 'NeuralTextures']
+/data4/FaceForensics++/retinaface/manipulated_sequences/DeepFakeDetection
+/data4/FaceForensics++/retinaface/manipulated_sequences/Deepfakes
+/data4/FaceForensics++/retinaface/manipulated_sequences/Face2Face
+/data4/FaceForensics++/retinaface/manipulated_sequences/FaceShifter
+/data4/FaceForensics++/retinaface/manipulated_sequences/FaceSwap
+/data4/FaceForensics++/retinaface/manipulated_sequences/NeuralTextures
+<class 'list'>
