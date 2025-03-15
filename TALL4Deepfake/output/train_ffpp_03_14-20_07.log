@@ -1,0 +1,17 @@
+Not using distributed mode
+Namespace(aa='rand-m9-mstd0.5', amp=False, augmentor_ver='v1', auto_resume=True, batch_size=4, bottleneck=None, clip_grad=None, color_jitter=0.4, contrastive_nomixup=False, cooldown_epochs=10, cutmix=0, cutmix_minmax=None, cutout='True', data_dir='##path_for_dataset##', data_txt_dir='##path_for_dataset_txt##', dataset='ffpp', decay_epochs=10, decay_rate=0.1, dense_sampling=True, device='cuda', disable_scaleup=True, dist_url='env://', distributed=False, drop=0.0, drop_block=None, drop_path=0.1, duration=4, epochs=60, eval=False, finetune=False, frames_per_group=1, hard_contrastive=False, hpe_to_token=True, initial_checkpoint='', input_size=112, local_rank=None, lr=1.5e-05, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, min_lr=1.5e-07, mixup=0, mixup_mode='batch', mixup_prob=1.0, mixup_switch_prob=0.5, modality='rgb', model='TALL_SWIN', model_ema=True, model_ema_decay=0.99996, model_ema_force_cpu=False, model_name='TALL_SWIN', momentum=0.9, no_token_mask=False, num_clips=8, num_crops=1, num_workers=8, opt='adamw', opt_betas=None, opt_eps=1e-08, output_dir='./log', patience_epochs=10, pin_mem=True, pretrained=False, random_sampling=False, recount=1, rel_pos=False, remode='pixel', repeated_aug=False, reprob=0.0, resplit=False, resume='', resume_loss_scaler=True, scale_range=[256, 320], sched='cosine', seed=42, smoothing=0.1, start_epoch=0, temporal_attention_only=False, temporal_heads_scale=1.0, temporal_mlp_scale=1.0, temporal_module_name=None, temporal_pooling=None, threed_data=False, thumbnail_rows=2, train_interpolation='bicubic', use_checkpoint=False, use_lmdb=False, use_pyav=False, warmup_epochs=10, warmup_lr=1.5e-08, weight_decay=1e-05, window_size=14, world_size=1)
+Creating model: TALL_SWIN
+{'patch_size': 4, 'window_size': [14, 14, 14, 7], 'embed_dim': 128, 'depths': [2, 2, 18, 2], 'num_heads': [4, 8, 16, 32], 'mlp_ratio': 4.0, 'use_checkpoint': False, 'ape': True, 'bottleneck': False, 'duration': 4, 'thumbnail_rows': 2, 'online_learning': False, 'num_classes': 2, 'drop_rate': 0.0, 'drop_path_rate': 0.1}
+---------------------------------------
+duration: 4 frame padding: 0 image_size: 224 patch_size: 4 thumbnail_size: (2, 2) ape: True
+number of params: 86920506
+Traceback (most recent call last):
+  File "main.py", line 462, in <module>
+    main(args)
+  File "main.py", line 337, in main
+    dataset_train = video_data_cls(args.data_dir, train_list, args.duration, args.frames_per_group,
+  File "/Code/Deepfake/TALL4Deepfake/video_dataset.py", line 416, in __init__
+    self.video_list, self.multi_label = self._parse_list()
+  File "/Code/Deepfake/TALL4Deepfake/video_dataset.py", line 424, in _parse_list
+    for x in open(self.list_file):
+FileNotFoundError: [Errno 2] No such file or directory: '##path_for_dataset##/##path_for_dataset_txt##/train.txt'
