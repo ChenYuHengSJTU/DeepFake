@@ -1,0 +1,183 @@
+Model_path ./checkpoints/4class-resnet-car-cat-chair-horse2025_03_02_19_44_43/model_epoch_last.pth
+=================================
+           ForenSynths
+=================================
+2025_03_07_13_23_38
+(0 val         ) acc: 100.0; ap: 100.0
+(1 train       ) acc: 100.0; ap: 100.0
+Model_path ./checkpoints/4class-resnet-car-cat-chair-horse2025_03_02_19_44_43/model_epoch_last.pth
+=================================
+           ForenSynths
+=================================
+2025_03_07_17_44_42
+(1600,) (1600,)
+(0 val         ) acc: 100.0; ap: 100.0
+Model_path ./checkpoints/4class-resnet-car-cat-chair-horse2025_03_02_19_44_43/model_epoch_last.pth
+=================================
+           ForenSynths
+=================================
+2025_03_07_17_46_19
+(62003,) (62003,)
+Model_path ./checkpoints/4class-resnet-car-cat-chair-horse2025_03_02_19_44_43/model_epoch_last.pth
+=================================
+           ForenSynths
+=================================
+2025_03_11_14_45_49
+test.py:42: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(opt.model_path, map_location='cpu'), strict=True)
+(5405,) (5405,)
+(0 deepfake    ) acc: 62.8; ap: 77.3
+(3998,) (3998,)
+(1 stargan     ) acc: 95.4; ap: 100.0
+(8000,) (8000,)
+(2 progan      ) acc: 99.8; ap: 100.0
+(4000,) (4000,)
+(3 biggan      ) acc: 89.3; ap: 94.7
+(10000,) (10000,)
+(4 gaugan      ) acc: 87.4; ap: 96.1
+(15976,) (15976,)
+(5 stylegan2   ) acc: 90.3; ap: 99.6
+(2642,) (2642,)
+(6 cyclegan    ) acc: 90.7; ap: 97.7
+(11982,) (11982,)
+(7 stylegan    ) acc: 94.2; ap: 99.8
+(8 Mean      ) acc: 88.7; ap: 95.7
+*************************
+================================================
+                GANGen-Detection
+================================================
+2025_03_11_14_51_49
+(4000,) (4000,)
+(0 InfoMaxGAN  ) acc: 93.7; ap: 95.7
+(4000,) (4000,)
+(1 BEGAN       ) acc: 98.9; ap: 100.0
+(4000,) (4000,)
+(2 STGAN       ) acc: 99.3; ap: 100.0
+(4000,) (4000,)
+(3 RelGAN      ) acc: 100.0; ap: 100.0
+(4000,) (4000,)
+(4 CramerGAN   ) acc: 95.9; ap: 97.5
+(4000,) (4000,)
+(5 MMDGAN      ) acc: 95.9; ap: 97.5
+(4000,) (4000,)
+(6 SNGAN       ) acc: 86.9; ap: 91.6
+(4000,) (4000,)
+(7 AttGAN      ) acc: 92.2; ap: 99.8
+(4000,) (4000,)
+(8 S3GAN       ) acc: 89.1; ap: 93.4
+(9 Mean      ) acc: 94.7; ap: 97.3
+*************************
+Model_path ./checkpoints/4class-resnet-car-cat-chair-horse2025_03_02_19_44_43/model_epoch_last.pth
+=============================================
+               Diffusion1kStep
+=============================================
+2025_03_11_14_56_22
+test.py:56: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(opt.model_path, map_location='cpu'), strict=True)
+Traceback (most recent call last):
+  File "test.py", line 73, in <module>
+    acc, ap, _, _, _, _ = validate(model, opt)
+  File "/Code/FreqNet-DeepfakeDetection/validate.py", line 14, in validate
+    for img, label in data_loader:
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+    return self._process_data(data)
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+    data.reraise()
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/_utils.py", line 706, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in DataLoader worker process 6.
+Original Traceback (most recent call last):
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 317, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 174, in collate
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 174, in <listcomp>
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 142, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+  File "/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 213, in collate_tensor_fn
+    out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+RuntimeError: Trying to resize storage that is not resizable
+
+Model_path ./checkpoints/4class-resnet-car-cat-chair-horse2025_03_02_19_44_43/model_epoch_last.pth
+=============================================
+               Diffusion1kStep
+=============================================
+2025_03_11_14_59_45
+test.py:56: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(opt.model_path, map_location='cpu'), strict=True)
+(19992,) (19992,)
+(0 ddpm        ) acc: 70.7; ap: 68.4
+(4000,) (4000,)
+(1 midjourney  ) acc: 56.3; ap: 61.4
+(4000,) (4000,)
+(2 improved-diffusion) acc: 51.5; ap: 55.3
+(4000,) (4000,)
+(3 DALLE       ) acc: 53.7; ap: 58.8
+(4000,) (4000,)
+(4 guided-diffusion) acc: 81.1; ap: 87.9
+(5 Mean      ) acc: 62.7; ap: 66.4
+*************************
+Traceback (most recent call last):
+  File "test.py", line 62, in <module>
+    dataroot = DetectionTests[testSet]['dataroot']
+KeyError: 'dataroot'
+Model_path ./checkpoints/4class-resnet-car-cat-chair-horse2025_03_02_19_44_43/model_epoch_last.pth
+======================================================
+                  DiffusionForensics
+======================================================
+2025_03_11_15_13_36
+test.py:56: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(opt.model_path, map_location='cpu'), strict=True)
+(3000,) (3000,)
+(0 dalle2      ) acc: 91.5; ap: 98.9
+(2000,) (2000,)
+(1 diff-projectedgan) acc: 100.0; ap: 100.0
+(1768,) (1768,)
+(2 ddpm        ) acc: 90.8; ap: 99.7
+(2200,) (2200,)
+(3 midjourney  ) acc: 99.5; ap: 99.8
+(12000,) (12000,)
+(4 adm         ) acc: 71.8; ap: 95.7
+(2000,) (2000,)
+(5 ldm         ) acc: 99.2; ap: 100.0
+(2000,) (2000,)
+(6 iddpm       ) acc: 61.3; ap: 97.5
+(2000,) (2000,)
+(7 pndm        ) acc: 90.0; ap: 99.8
+(2000,) (2000,)
+(8 projectedgan) acc: 100.0; ap: 100.0
+(2000,) (2000,)
+(9 diff-stylegan) acc: 96.5; ap: 99.9
+(392,) (392,)
+(10 sdv2        ) acc: 34.2; ap: -0.0
+/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+  avg = a.mean(axis, **keepdims_kw)
+/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/chenyuheng/miniconda3/envs/deepfake/lib/python3.8/site-packages/sklearn/metrics/_ranking.py:980: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+(4000,) (4000,)
+(11 if          ) acc: 78.6; ap: 97.2
+(15000,) (15000,)
+(12 sdv1        ) acc: 69.4; ap: 99.2
+(13 Mean      ) acc: 83.3; ap: 91.4
+*************************
+=========================================================
+                   UniversalFakeDetect
+=========================================================
+2025_03_11_15_19_01
+(2000,) (2000,)
+(0 dalle       ) acc: 98.1; ap: 99.7
+(2000,) (2000,)
+(1 glide_100_10) acc: 83.7; ap: 94.2
+(2000,) (2000,)
+(2 glide_50_27 ) acc: 83.4; ap: 94.1
+(3 Mean      ) acc: 88.4; ap: 96.0
+*************************
