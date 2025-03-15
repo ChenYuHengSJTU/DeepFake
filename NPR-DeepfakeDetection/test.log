@@ -1,0 +1,86 @@
+Model_path ./checkpoints/4class-resnet-car-cat-chair-horse2025_03_01_14_34_55/model_epoch_last.pth
+================================================
+                GANGen-Detection
+================================================
+2025_03_06_19_35_33
+(0 AttGAN      ) acc: 86.0; ap: 96.2
+(1 BEGAN       ) acc: 99.8; ap: 100.0
+(2 MMDGAN      ) acc: 98.4; ap: 99.9
+(3 SNGAN       ) acc: 82.2; ap: 98.6
+(4 InfoMaxGAN  ) acc: 66.0; ap: 93.9
+(5 S3GAN       ) acc: 58.9; ap: 72.8
+(6 RelGAN      ) acc: 100.0; ap: 100.0
+(7 CramerGAN   ) acc: 98.2; ap: 99.9
+(8 STGAN       ) acc: 90.4; ap: 100.0
+(9 Mean      ) acc: 86.7; ap: 95.7
+*************************
+======================================================
+                  DiffusionForensics
+======================================================
+2025_03_06_19_36_21
+(0 ldm         ) acc: 100.0; ap: 100.0
+(1 sdv1        ) acc: 88.3; ap: 99.9
+(2 pndm        ) acc: 52.0; ap: 87.6
+(3 projectedgan) acc: 90.6; ap: 99.9
+(4 ddpm        ) acc: 90.3; ap: 99.7
+(5 dalle2      ) acc: 91.9; ap: 96.0
+/home/chenyuheng/Code/NPR-DeepfakeDetection/pytorch18/lib/python3.8/site-packages/numpy/lib/function_base.py:380: RuntimeWarning: Mean of empty slice.
+  avg = a.mean(axis)
+/home/chenyuheng/Code/NPR-DeepfakeDetection/pytorch18/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+/home/chenyuheng/Code/NPR-DeepfakeDetection/pytorch18/lib/python3.8/site-packages/sklearn/metrics/_ranking.py:817: RuntimeWarning: invalid value encountered in true_divide
+  recall = tps / tps[-1]
+(6 sdv2        ) acc: 31.6; ap: nan
+(7 diff-projectedgan) acc: 88.3; ap: 99.9
+(8 diff-stylegan) acc: 99.1; ap: 100.0
+(9 iddpm       ) acc: 83.4; ap: 94.5
+(10 adm         ) acc: 73.7; ap: 93.3
+(11 if          ) acc: 86.8; ap: 95.1
+(12 midjourney  ) acc: 98.8; ap: 99.4
+(13 Mean      ) acc: 82.7; ap: nan
+*************************
+=========================================================
+                   UniversalFakeDetect
+=========================================================
+2025_03_06_19_38_10
+(0 glide_50_27 ) acc: 93.1; ap: 97.6
+(1 dalle       ) acc: 60.2; ap: 89.1
+(2 glide_100_10) acc: 94.5; ap: 98.2
+(3 Mean      ) acc: 82.6; ap: 95.0
+*************************Model_path checkpoints/4class-resnet-car-cat-chair-horse2025_03_01_14_34_55/model_epoch_last.pth
+=================================
+           ForenSynths
+=================================
+2025_03_09_19_18_53
+Model_path checkpoints/4class-resnet-car-cat-chair-horse2025_03_01_14_34_55/model_epoch_last.pth
+=================================
+
+=================================
+           ForenSynths
+=================================
+2025_03_09_19_30_34
+[0 0 0 ... 1 1 1] [5.19234246e-14 1.43375155e-11 2.35677153e-01 ... 2.25577994e-11
+ 9.97062266e-01 4.27424493e-06]
+(0 biggan      ) acc: 74.0; ap: 86.5
+[0 0 0 ... 1 1 1] [2.45557936e-27 4.66103239e-17 2.00794133e-36 ... 1.42898440e-01
+ 1.70490906e-01 3.61275315e-01]
+(1 cyclegan    ) acc: 63.0; ap: 92.6
+[0 0 0 ... 1 1 1] [0.99080467 0.99832779 0.99281126 ... 0.75551236 0.97878474 0.82400244]
+(2 deepfake    ) acc: 63.1; ap: 64.6
+[0 0 0 ... 1 1 1] [1.36319813e-05 9.96070266e-01 1.41256024e-07 ... 9.36776102e-01
+ 1.44254445e-05 3.23320244e-04]
+(3 gaugan      ) acc: 68.0; ap: 82.6
+[0 0 0 ... 1 1 1] [1.09662344e-22 9.11951330e-12 3.19427477e-18 ... 1.00000000e+00
+ 1.00000000e+00 9.99999523e-01]
+(4 progan      ) acc: 99.9; ap: 100.0
+[0 0 0 ... 1 1 1] [2.10603994e-05 3.40690747e-08 5.23580033e-11 ... 2.73396867e-19
+ 1.00000000e+00 9.59715664e-01]
+(5 stargan     ) acc: 76.0; ap: 88.7
+[0 0 0 ... 1 1 1] [2.11257586e-18 2.24918466e-07 1.84443627e-10 ... 1.00000000e+00
+ 1.00000000e+00 9.91654038e-01]
+(6 stylegan    ) acc: 94.8; ap: 99.2
+[0 0 0 ... 1 1 1] [2.11257586e-18 2.24918466e-07 1.84443627e-10 ... 9.99997377e-01
+ 4.21160787e-01 9.98655319e-01]
+(7 stylegan2   ) acc: 97.4; ap: 99.9
+(8 Mean      ) acc: 79.5; ap: 89.3
+*************************
