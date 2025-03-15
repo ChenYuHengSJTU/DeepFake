@@ -1,0 +1,19 @@
+PREPROCESSING:
+  DATASET: Celeb-DF
+  COMPRESSION: c0
+  SPLIT: test
+  ROOT: /home/chenyuheng/Code/SelfBlendedImages/data/FaceForensics++/c0/
+  # ROOT: /home/chenyuheng/Code/SelfBlendedImages/data/Celeb-DF/
+  # ROOT: /home/chenyuheng/Code/SelfBlendedImages/data/FaceForensics++/
+  # FAKETYPE: [Deepfakes]
+  FAKETYPE: [Deepfakes, Face2Face, FaceSwap, NeuralTextures, FaceShifter]
+  # FAKETYPE: [YouTube-real, Celeb-real, Celeb-synthesis]
+  IMAGE_SUFFIX: png
+  DATA_TYPE: frames
+  LABEL: [real]
+  facial_lm_pretrained: pretrained/shape_predictor_81_face_landmarks.dat
+  N_LANDMARKS: 81
+  SAMPLING:
+    ACTIVE: False
+    NUMBERS: 8
+  DEBUG: False

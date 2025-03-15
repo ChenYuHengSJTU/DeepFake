@@ -1,0 +1,28 @@
+FF++
+
+CDF
+
+DFW
+
+DFD -- FF 
+
+DFDC
+
+
+
+preparation
+image crop
+-d subfolders
+ROOT, SAVE
+
+
+landmark detection -- whether needed
+
+
+
+test
+
+SBI
+
+
+BI
