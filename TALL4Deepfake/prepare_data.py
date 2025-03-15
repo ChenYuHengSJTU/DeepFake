@@ -8,16 +8,19 @@ init(autoreset=True)
 import cv2
 
 # some video's format cannot usr GETID to get frame count
+# def get_frame_count(vid_path):
+#     cap=cv2.VideoCapture(vid_path)
+#     cnt=0
+#     while True:
+#         ret, frame=cap.read()
+#         if not ret:
+#             break
+#         cnt+=1
+#     cap.release()
+#     return cnt
+
 def get_frame_count(vid_path):
-    cap=cv2.VideoCapture(vid_path)
-    cnt=0
-    while True:
-        ret, frame=cap.read()
-        if not ret:
-            break
-        cnt+=1
-    cap.release()
-    return cnt
+    pass
 
 def get_split():
     rand_val=random()

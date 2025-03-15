@@ -30,7 +30,8 @@ class AVLip(Dataset):
                                      std=[0.26862954, 0.26130258, 0.27577711])(img)
         # crop images
         # crops[0]: 1.0x, crops[1]: 0.65x, crops[2]: 0.45x
-        crops = [[transforms.Resize((224, 224))(img[:, 500:, i:i + 500]) for i in range(5)], [], []]
+        # crops = [[transforms.Resize((224, 224))(img[:, 500:, i:i + 500]) for i in range(5)], [], []]
+        crops = [[transforms.Resize((224, 224))(img[:, :, i:i + 500]) for i in range(5)], [], []]
         crop_idx = [(28, 196), (61, 163)]
         for i in range(len(crops[0])):
             crops[1].append(transforms.Resize((224, 224))
