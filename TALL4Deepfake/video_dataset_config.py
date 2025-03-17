@@ -7,7 +7,7 @@ DATASET_CONFIG = {
         'val_list_name': 'val.txt',
         'test_list_name': 'test.txt',
         'filename_seperator': ",",
-        'image_tmpl': '{:04d}.jpg',
+        'image_tmpl': '{:04d}.png',
         'filter_video': 3,
     }
 }

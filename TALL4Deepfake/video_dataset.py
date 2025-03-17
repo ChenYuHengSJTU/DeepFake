@@ -92,7 +92,7 @@ def load_image(root_path, directory, image_tmpl, idx, modality):
     if modality == 'rgb':
         for i in idx:
             image_path_file = os.path.join(root_path, directory, image_tmpl.format(i))
-            out.append(_safe_load_image(image_path_file))
+            out.append(_safe_load_image(image_path_file.strip()))
     elif modality == 'rgbdiff':
         tmp = {}
         new_idx = np.unique(np.concatenate((np.asarray(idx), np.asarray(idx) + 1)))
@@ -354,7 +354,7 @@ class VideoDataSet(data.Dataset):
 
     def __init__(self, root_path, list_file, num_groups=64, frames_per_group=1, sample_offset=0, num_clips=1,
                  modality='rgb', dense_sampling=True, fixed_offset=True,
-                 image_tmpl='{:05d}.jpg', transform=None, is_train=True, test_mode=False, seperator=' ',
+                 image_tmpl='{:05d}.png', transform=None, is_train=True, test_mode=False, seperator=' ',
                  filter_video=0, num_classes=None, whole_video=False,
                  fps=29.97, audio_length=1.28, resampling_rate=24000):
         """
@@ -545,7 +545,7 @@ class VideoDataSetLMDB(data.Dataset):
     # do not support sound
     def __init__(self, datadir, db_name, num_groups=16, frames_per_group=1, sample_offset=0, num_clips=1,
                  modality='rgb', dense_sampling=False, fixed_offset=True,
-                 image_tmpl='{:05d}.jpg', transform=None, is_train=True, test_mode=False,
+                 image_tmpl='{:05d}.png', transform=None, is_train=True, test_mode=False,
                  seperator=' ', filter_video=0, num_classes=None, whole_video=False,
                  fps=29.97, audio_length=1.28, resampling_rate=24000):
         """
@@ -727,7 +727,7 @@ class MultiVideoDataSet(data.Dataset):
 
     def __init__(self, root_path, list_file, num_groups=64, frames_per_group=1, sample_offset=0, num_clips=1,
                  modality='rgb', dense_sampling=False, fixed_offset=True,
-                 image_tmpl='{:05d}.jpg', transform=None, is_train=True, test_mode=False, seperator=' ',
+                 image_tmpl='{:05d}.png', transform=None, is_train=True, test_mode=False, seperator=' ',
                  filter_video=0, num_classes=None, whole_video=False,
                  fps=29.97, audio_length=1.28, resampling_rate=24000):
         """
@@ -822,7 +822,7 @@ class MultiVideoDataSetLMDB(data.Dataset):
 
     def __init__(self, root_path, list_file, num_groups=64, frames_per_group=1, sample_offset=0, num_clips=1,
                  modality='rgb', dense_sampling=False, fixed_offset=True,
-                 image_tmpl='{:05d}.jpg', transform=None, is_train=True, test_mode=False, seperator=' ',
+                 image_tmpl='{:05d}.png', transform=None, is_train=True, test_mode=False, seperator=' ',
                  filter_video=0, num_classes=None, whole_video=False,
                  fps=29.97, audio_length=1.28, resampling_rate=24000):
         """
@@ -937,7 +937,7 @@ class VideoDataSetOnline(VideoDataSet):
 
     def __init__(self, root_path, list_file, num_groups=8, frames_per_group=1, sample_offset=0,
                  num_clips=1, modality='rgb', dense_sampling=False, fixed_offset=True,
-                 image_tmpl='{:05d}.jpg', transform=None, is_train=True, test_mode=False, seperator=' ',
+                 image_tmpl='{:05d}.png', transform=None, is_train=True, test_mode=False, seperator=' ',
                  filter_video=0, num_classes=None, whole_video=False,
                  fps=29.97, audio_length=1.28, resampling_rate=24000):
         """
@@ -1087,7 +1087,7 @@ class MultiVideoDataSetOnline(data.Dataset):
 
     def __init__(self, root_path, list_file, num_groups=64, frames_per_group=1, sample_offset=0, num_clips=1,
                  modality='rgb', dense_sampling=False, fixed_offset=True,
-                 image_tmpl='{:05d}.jpg', transform=None, is_train=True, test_mode=False, seperator=' ',
+                 image_tmpl='{:05d}.png', transform=None, is_train=True, test_mode=False, seperator=' ',
                  filter_video=0, num_classes=None, whole_video=False,
                  fps=29.97, audio_length=1.28, resampling_rate=24000):
         """

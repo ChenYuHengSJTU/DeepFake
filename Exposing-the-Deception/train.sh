@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-python training.py  --name FFPP2503021626                                      \
+python training.py  --name FFPP2503152220                                      \
                     --gpu_num 0,1                                                   \
                     --model resnet                    \
                     --epoch 20                                                      \

@@ -10,6 +10,8 @@ from albumentations import Compose, RandomBrightnessContrast,HorizontalFlip, Fan
 from albumentations.pytorch.functional import img_to_tensor
 import cv2
 import logging
+from tqdm import tqdm
+
 class ReadDataset():
     """
         initialize once and can be reused as train/test/validation set
@@ -82,7 +84,8 @@ class ReadDataset():
                 key='val'
             elif '/train_' in file:
                 key = 'train'
-            for i in range(len(lines)):
+            lpar=tqdm(range(len(lines)), desc=file)
+            for i in lpar:
                 # start clearing duplicates
                 raw = re.sub("\s", "", lines[i]).split(",")
                 paths = os.listdir(raw[1]) #video name

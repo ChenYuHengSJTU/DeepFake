@@ -15,8 +15,8 @@ from retinaface.utils import vis_annotations
 import torch
 
 
-ROOT = '/home/chenyuheng/Code/SelfBlendedImages/data'
-SAVE_DIR = f'{ROOT}/FaceForensics++/c0/v2'
+ROOT = '/data3'
+SAVE_DIR = f'{ROOT}/FaceForensics++/LAA-Net/'
 IMAGE_H, IMAGE_W, IMAGE_C = 256, 256, 3
 PADDING = 0.25
 
@@ -147,7 +147,7 @@ if __name__=='__main__':
     if args.dataset=='Original':
         dataset_path='{}/FaceForensics++/original_sequences/youtube/'.format(ROOT)
     elif args.dataset=='DeepFakeDetection_original':
-        dataset_path='/data/FaceForensics++/original_sequences/actors/{}/'.format(args.comp)
+        dataset_path='{}/FaceForensics++/original_sequences/actors/'.format(ROOT)
     elif args.dataset in ['DeepFakeDetection','FaceShifter','Face2Face','Deepfakes','FaceSwap','NeuralTextures']:
         dataset_path='{}/FaceForensics++/manipulated_sequences/{}/'.format(ROOT, args.dataset)
     elif args.dataset in ['Celeb-real','Celeb-synthesis','YouTube-real']:
@@ -169,6 +169,7 @@ if __name__=='__main__':
     labels = []
     if args.dataset in ['Original','DeepFakeDetection','FaceShifter','Face2Face','Deepfakes','FaceSwap','NeuralTextures']:
         movies_path = os.path.join(dataset_path, args.comp, 'videos/')
+        
         mask_mov_paths = os.path.join(dataset_path, 'masks', 'videos/')
         
         # Annotation file for FF++

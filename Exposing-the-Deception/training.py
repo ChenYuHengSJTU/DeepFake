@@ -32,6 +32,8 @@ class train_and_test_model():
         self.val_dataset = MyDataset(self.dataset.data['val'], self.dataset.labels['val'],size=args.size , test=True)
         self.test_dataset = MyDataset(self.dataset.data['test'], self.dataset.labels['test'],size=args.size , test=True)
 
+        print("finishing preparing datasets")
+
         self.device = torch.device("cuda", self.device_ids[0])
         try:
             self.train_loader = DataLoader(self.train_dataset, shuffle=True, batch_size=args.bs,
