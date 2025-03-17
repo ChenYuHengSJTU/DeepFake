@@ -31,7 +31,7 @@ def main(src_folder:str='/data3/FaceForensics++', compression:str='c23'):
     fake_src=os.path.join(src_folder, 'retinaface', 'manipulated_sequences')
     real_src=os.path.join(src_folder, 'retinaface', 'original_sequences', 'youtube', compression)
     fake_types=sorted(os.listdir(fake_src))
-    with train.begin(write=True) as train, test.begin(write=True) as test, val.begin(write=True) as val:
+    with train.begin(write=True) as train_ctx, test.begin(write=True) as test_ctx, val.begin(write=True) as val_ctx:
         # train=csv.writer(f0)
         # test=csv.writer(f1)
         # val=csv.writer(f2)
@@ -54,14 +54,20 @@ def main(src_folder:str='/data3/FaceForensics++', compression:str='c23'):
                     # vid_path=vid_path.split('.')[0]
                     match split:
                         case 0: 
-                            train.put(str(train_cnt).encode(), pickle.dumps((img, 1)))
+                            train_ctx.put(str(train_cnt).encode(), pickle.dumps((img, 1)))
                             train_cnt+=1
                         case 1: 
-                            test.put(str(test_cnt).encode(), pickle.dumps((img, 1)))
+                            test_ctx.put(str(test_cnt).encode(), pickle.dumps((img, 1)))
                             test_cnt+=1
                         case 2: 
-                            val.put(str(val_cnt).encode(), pickle.dumps((img, 1)))
+                            val_ctx.put(str(val_cnt).encode(), pickle.dumps((img, 1)))
                             val_cnt+=1
+            train_ctx.commit()
+            test_ctx.commit()
+            val_ctx.commit()
+            train_ctx=train.begin(write=True)
+            test_ctx=test.begin(write=True)
+            val_ctx=val.begin(write=True)
 
         vpar=tqdm(sorted(os.listdir(real_src)))
         print(Fore.GREEN+'Real')
@@ -76,18 +82,18 @@ def main(src_folder:str='/data3/FaceForensics++', compression:str='c23'):
                 split=get_split()
                 match split:
                     case 0: 
-                        train.put(str(train_cnt).encode(), pickle.dumps((img, 0)))
+                        train_ctx.put(str(train_cnt).encode(), pickle.dumps((img, 0)))
                         train_cnt+=1
                     case 1: 
-                        test.put(str(test_cnt).encode(), pickle.dumps((img, 0)))
+                        test_ctx.put(str(test_cnt).encode(), pickle.dumps((img, 0)))
                         test_cnt+=1
                     case 2:
-                        val.put(str(val_cnt).encode(), pickle.dumps((img, 0)))
+                        val_ctx.put(str(val_cnt).encode(), pickle.dumps((img, 0)))
                         val_cnt+=1
 
-        # train.commit()
-        # test.commit()
-        # val.commit()
+        train_ctx.commit()
+        test_ctx.commit()
+        val_ctx.commit()
     pass
 
 if __name__=="__main__":

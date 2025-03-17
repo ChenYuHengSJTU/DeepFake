@@ -11106,3 +11106,62 @@ Test: Total time: 0:24:57 (5.1626 s / it)
 * Acc@1 83.879 AUC 0.4854603711988392 loss 0.468
 Accuracy of the network on the 1162 test images: 83.9%
 Max accuracy: 83.88%
+Epoch: [6]  [   0/1052]  eta: 11:34:53  lr: 0.00000751  loss: 0.3767 (0.3767)  time: 39.6326  data: 39.2664  max mem: 10402
+Epoch: [6]  [  50/1052]  eta: 1:33:36  lr: 0.00000751  loss: 0.5433 (0.5130)  time: 5.6017  data: 5.2655  max mem: 10402
+Epoch: [6]  [ 100/1052]  eta: 1:28:16  lr: 0.00000751  loss: 0.5385 (0.5252)  time: 5.5048  data: 5.1691  max mem: 10402
+Epoch: [6]  [ 150/1052]  eta: 1:21:22  lr: 0.00000751  loss: 0.3294 (0.5190)  time: 5.8285  data: 5.4946  max mem: 10402
+Epoch: [6]  [ 200/1052]  eta: 1:17:33  lr: 0.00000751  loss: 0.6348 (0.5129)  time: 4.9231  data: 4.5889  max mem: 10402
+Epoch: [6]  [ 250/1052]  eta: 1:13:14  lr: 0.00000751  loss: 0.2697 (0.5008)  time: 6.3363  data: 6.0008  max mem: 10402
+Epoch: [6]  [ 300/1052]  eta: 1:10:09  lr: 0.00000751  loss: 0.5185 (0.5151)  time: 7.1218  data: 6.7869  max mem: 10402
+Epoch: [6]  [ 350/1052]  eta: 1:04:12  lr: 0.00000751  loss: 0.5930 (0.5245)  time: 4.0708  data: 3.7367  max mem: 10402
+Epoch: [6]  [ 400/1052]  eta: 0:59:18  lr: 0.00000751  loss: 0.2663 (0.5180)  time: 4.7491  data: 4.4153  max mem: 10402
+Epoch: [6]  [ 450/1052]  eta: 0:56:18  lr: 0.00000751  loss: 0.3402 (0.5137)  time: 8.1837  data: 7.8469  max mem: 10402
+Epoch: [6]  [ 500/1052]  eta: 0:51:07  lr: 0.00000751  loss: 0.6070 (0.5120)  time: 5.4898  data: 5.1553  max mem: 10402
+Epoch: [6]  [ 550/1052]  eta: 0:46:26  lr: 0.00000751  loss: 0.3003 (0.5133)  time: 5.3752  data: 5.0390  max mem: 10402
+Epoch: [6]  [ 600/1052]  eta: 0:42:08  lr: 0.00000751  loss: 0.4222 (0.5149)  time: 4.1915  data: 3.8579  max mem: 10402
+Epoch: [6]  [ 650/1052]  eta: 0:37:32  lr: 0.00000751  loss: 0.6033 (0.5135)  time: 5.6682  data: 5.3318  max mem: 10402
+Epoch: [6]  [ 700/1052]  eta: 0:33:02  lr: 0.00000751  loss: 0.3606 (0.5153)  time: 5.3609  data: 5.0272  max mem: 10402
+Epoch: [6]  [ 750/1052]  eta: 0:28:32  lr: 0.00000751  loss: 0.2698 (0.5131)  time: 6.6653  data: 6.3303  max mem: 10402
+Epoch: [6]  [ 800/1052]  eta: 0:23:43  lr: 0.00000751  loss: 0.3833 (0.5152)  time: 6.3239  data: 5.9888  max mem: 10402
+Epoch: [6]  [ 850/1052]  eta: 0:19:00  lr: 0.00000751  loss: 0.5662 (0.5149)  time: 5.6007  data: 5.2655  max mem: 10402
+Epoch: [6]  [ 900/1052]  eta: 0:14:21  lr: 0.00000751  loss: 0.6133 (0.5160)  time: 5.0829  data: 4.7479  max mem: 10402
+Epoch: [6]  [ 950/1052]  eta: 0:09:36  lr: 0.00000751  loss: 0.3420 (0.5168)  time: 5.6202  data: 5.2786  max mem: 10402
+Epoch: [6]  [1000/1052]  eta: 0:04:55  lr: 0.00000751  loss: 0.4216 (0.5194)  time: 6.6355  data: 6.2979  max mem: 10402
+Epoch: [6]  [1050/1052]  eta: 0:00:11  lr: 0.00000751  loss: 0.3108 (0.5192)  time: 5.7406  data: 5.4060  max mem: 10402
+Epoch: [6]  [1051/1052]  eta: 0:00:05  lr: 0.00000751  loss: 0.3108 (0.5193)  time: 3.3414  data: 3.0084  max mem: 10402
+Epoch: [6] Total time: 1:38:51 (5.6382 s / it)
+Averaged stats: lr: 0.00000751  loss: 0.3108 (0.5193)
+Test:  [  0/290]  eta: 2:08:40  acc1: 100.0000 (100.0000)  time: 26.6222  data: 26.4868  max mem: 10402
+Test:  [ 10/290]  eta: 0:25:46  acc1: 100.0000 (100.0000)  time: 5.5240  data: 5.4135  max mem: 10402
+Test:  [ 20/290]  eta: 0:21:17  acc1: 100.0000 (100.0000)  time: 3.6375  data: 3.5298  max mem: 10402
+Test:  [ 30/290]  eta: 0:19:04  acc1: 100.0000 (100.0000)  time: 3.7821  data: 3.6740  max mem: 10402
+Test:  [ 40/290]  eta: 0:20:48  acc1: 100.0000 (100.0000)  time: 5.2657  data: 5.1565  max mem: 10402
+Test:  [ 50/290]  eta: 0:18:42  acc1: 100.0000 (100.0000)  time: 5.1092  data: 5.0002  max mem: 10402
+Test:  [ 60/290]  eta: 0:17:12  acc1: 100.0000 (100.0000)  time: 3.4563  data: 3.3486  max mem: 10402
+Test:  [ 70/290]  eta: 0:16:15  acc1: 100.0000 (100.0000)  time: 3.8054  data: 3.6981  max mem: 10402
+Test:  [ 80/290]  eta: 0:17:53  acc1: 100.0000 (100.0000)  time: 7.0067  data: 6.8980  max mem: 10402
+Test:  [ 90/290]  eta: 0:16:16  acc1: 100.0000 (100.0000)  time: 6.4861  data: 6.3775  max mem: 10402
+Test:  [100/290]  eta: 0:14:49  acc1: 100.0000 (100.0000)  time: 2.9491  data: 2.8410  max mem: 10402
+Test:  [110/290]  eta: 0:14:01  acc1: 100.0000 (100.0000)  time: 3.7402  data: 3.6315  max mem: 10402
+Test:  [120/290]  eta: 0:14:26  acc1: 100.0000 (100.0000)  time: 7.1754  data: 7.0665  max mem: 10402
+Test:  [130/290]  eta: 0:13:20  acc1: 100.0000 (100.0000)  time: 6.7948  data: 6.6862  max mem: 10402
+Test:  [140/290]  eta: 0:12:24  acc1: 100.0000 (100.0000)  time: 4.1643  data: 4.0571  max mem: 10402
+Test:  [150/290]  eta: 0:11:24  acc1: 100.0000 (100.0000)  time: 4.1651  data: 4.0577  max mem: 10402
+Test:  [160/290]  eta: 0:10:57  acc1: 100.0000 (100.0000)  time: 5.7570  data: 5.6476  max mem: 10402
+Test:  [170/290]  eta: 0:10:21  acc1: 100.0000 (100.0000)  time: 7.3311  data: 7.2206  max mem: 10402
+Test:  [180/290]  eta: 0:09:24  acc1: 100.0000 (100.0000)  time: 5.6595  data: 5.5506  max mem: 10402
+Test:  [190/290]  eta: 0:08:24  acc1: 100.0000 (100.0000)  time: 3.9042  data: 3.7963  max mem: 10402
+Test:  [200/290]  eta: 0:07:29  acc1: 100.0000 (100.0000)  time: 3.7549  data: 3.6470  max mem: 10402
+Test:  [210/290]  eta: 0:06:59  acc1: 100.0000 (100.0000)  time: 7.2241  data: 7.1151  max mem: 10402
+Test:  [220/290]  eta: 0:06:02  acc1: 100.0000 (100.0000)  time: 7.0420  data: 6.9335  max mem: 10402
+Test:  [230/290]  eta: 0:05:04  acc1: 100.0000 (100.0000)  time: 3.1465  data: 3.0386  max mem: 10402
+Test:  [240/290]  eta: 0:04:09  acc1: 100.0000 (100.0000)  time: 2.9036  data: 2.7957  max mem: 10402
+Test:  [250/290]  eta: 0:03:25  acc1: 100.0000 (96.9124)  time: 5.9684  data: 5.8602  max mem: 10402
+Test:  [260/290]  eta: 0:02:33  acc1: 0.0000 (93.1992)  time: 6.5961  data: 6.4868  max mem: 10402
+Test:  [270/290]  eta: 0:01:41  acc1: 0.0000 (89.7601)  time: 4.1972  data: 4.0897  max mem: 10402
+Test:  [280/290]  eta: 0:00:50  acc1: 0.0000 (86.5658)  time: 4.5772  data: 4.4704  max mem: 10402
+Test:  [289/290]  eta: 0:00:05  acc1: 0.0000 (83.8793)  time: 4.0914  data: 3.9841  max mem: 10402
+Test: Total time: 0:24:15 (5.0194 s / it)
+* Acc@1 83.879 AUC 0.4729350209671835 loss 0.451
+Accuracy of the network on the 1162 test images: 83.9%
+Max accuracy: 83.88%
